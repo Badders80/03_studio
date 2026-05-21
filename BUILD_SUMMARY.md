@@ -1,53 +1,15 @@
-# Evolution Studio — Build Summary
+# 03_studio Build Summary
 
-**Track:** Content Generation & Creative Suite
-**Repository:** `{{PROJECT_FOLDER}}/`
-**Status:** 🟢 Scaffolding Complete - Vertex Handshake Verified
+## Current State: Operational ✅
+The `03_studio` OpenMontage Render Silo is fully built and capable of end-to-end programmatic editing. The infrastructure has been established to run heavy AI models locally via the RTX 3060.
 
----
+## Completed Integrations
+- **GPU Pass-through:** `nvidia-smi` successfully detects the RTX 3060 in WSL. Hardware encoding (`h264_nvenc`) is wired directly into `cutter.py`.
+- **Fast Storage:** `data/` is successfully symlinked to `/mnt/s/studio_scratch`, ensuring the C: drive is not bloated by 4K video rendering.
+- **The Nervous System:** `main.py` is fully wired to Firestore, successfully polling the `jobs` collection.
+- **Python Backend:** `.venv` is created, and all critical dependencies are installed (`whisperx`, `firebase-admin`, `requests`, `torch`).
+- **Remotion Visuals:** Bypassed the interactive `create-video` CLI and manually constructed the `KenBurns` and `DataOverlay` cinematic React components.
 
-## Architecture
-
-```
-{{PROJECT_FOLDER}}/
-├── src/              → Source code
-├── public/           → Static assets
-├── docs/             → Project docs (no task lists — use hub)
-├── MEMORY.md         → Current state, blockers, recent decisions
-├── AGENTS.md         → Agent rules
-├── HANDSHAKE.md      → API contract with 01_evolution/
-├── BUILD_SUMMARY.md  → This file (what exists)
-└── GAME_PLAN.md      → Build plan
-```
-
----
-
-## What Exists
-
-| Component | Status | Notes |
-|-----------|--------|-------|
-| {{COMPONENT_1}} | {{STATUS}} | {{NOTE}} |
-| {{COMPONENT_2}} | {{STATUS}} | {{NOTE}} |
-
----
-
-## Dependencies
-
-| Dependency | Source |
-|------------|--------|
-| Data / APIs | `01_evolution/` (SSOT, Assets, KYC) |
-| Assets | `Evolution_Content/assets/` or GCS |
-| Design system | `DNA/brand/` |
-
----
-
-## What's Next
-
-1. {{NEXT_STEP_1}}
-2. {{NEXT_STEP_2}}
-
----
-
-## Related
-- **Backend:** [`../01_evolution/docs/BUILD_SUMMARY.md`](../01_evolution/docs/BUILD_SUMMARY.md)
-- **Task hub:** [`../01_evolution/docs/PROGRESS.md`](../01_evolution/docs/PROGRESS.md)
+## What is Missing / Next Steps
+- **GCS Download/Upload Logic:** `main.py` currently points to a placeholder local file (`raw_input.mp4`). The next feature phase will be to wire up the Google Cloud Storage (GCS) SDK to automatically download raw video, and upload the final stitched asset back to the cloud.
+- **WhisperX Model Caching:** Be aware that the very first run of `main.py` will take a moment to download the WhisperX/Wav2Vec2 models to your local HuggingFace cache. 

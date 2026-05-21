@@ -1,0 +1,23 @@
+# Environments
+.env
+.venv/
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Mac/OS
+.DS_Store
+Thumbs.db
+
+# Studio Scratch/Data
+scratch/
+data/
+
+# Logs
+*.log
+node_modules/
+.next/
