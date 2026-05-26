@@ -21,3 +21,10 @@ data/
 *.log
 node_modules/
 .next/
+
+# Video outputs and dump directories (heavy media files)
+output/
+raw/
+Content_Dump/
+remotion-renderer/out/
+

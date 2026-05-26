@@ -2,3 +2,5 @@ firebase-admin
 python-dotenv
 whisperx
 requests
+moviepy==1.0.3
+pillow
