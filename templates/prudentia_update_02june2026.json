@@ -1,0 +1,68 @@
+{
+  "slug": "prudentia_update_02june2026",
+  "preheader": "Prudentia trotted up 100% sound and scoped clean following her fifth-place finish in a traffic-heavy Roy and Pam Browne Sprint at Te Rapa.",
+  "title": "Te Rapa Review: <span style=\"color: #d4a964; font-style: italic; font-weight: 400;\">Prudentia</span> Finishes Tenaciously",
+  "hero_media": "<video src=\"/updates/Prudentia_Update_27May2026.mp4\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;\" controls autoplay muted loop></video>",
+  "hero_image_email": "/updates/prudentia_te_rapa_may30.jpg",
+  "hero_caption": "PRUDENTIA RETURNING FROM HER SPRINT TEST AT TE RAPA, COMPETING IN BENCHMARK 75 GRADE.",
+  "standfirst": "A traffic-heavy passage at Te Rapa saw Prudentia finish a courageous fifth on Saturday, with a Tuesday morning veterinary check-up confirming her in superb condition for her winter campaign.",
+  "body_1": "Prudentia contested the Roy and Pam Browne Sprint (BM75) over 1200m at Te Rapa on Saturday, 30 May. Carrying a lightweight 54.0kg and jumping cleanly from Barrier 1, she was immediately positioned on the fence. However, as the field bunched tightly around the bend, she became pocketed along the rail, leaving her with no room to stretch her stride at a critical juncture in the home straight.",
+  "body_2": "Despite being held up behind a dense wall of horses until the final 100m, she displayed exceptional tenacity. Once a sliver of daylight appeared, she finished with high-velocity sectionals, surging through the line to finish fifth, just behind the placegetters. It was a run of quiet authority that demonstrated her capability and competitiveness at this higher grade.",
+  "body_3": "This morning, 2 June, the Wexford yard conducted a comprehensive post-race assessment. Trainers Lance O'Sullivan and Andrew Scott report that she has trotted up 100% soundly. An endoscopy scoped completely clean, showing clear airways, and she has fully cleared her feed box. Given her swift physical recovery and excellent fitness metrics, the team will keep her active, targeting another Benchmark 75 event over 1200m or 1400m in late June, where her heavy-track pedigree will shine.",
+  "quote": {
+    "text": "“She trotted up soundly this morning and scoped completely clean. The rail race was frustrating, but her final 100 metres showed massive tenacity. She is in superb order.”",
+    "author": "— Andrew Scott",
+    "affiliation": "Wexford Stables"
+  },
+  "revisit_links": [
+    {
+      "text": "Watch: Gutsy third over 1400m at Waikato (May 2)",
+      "url": "https://loveracing.nz/Common/SystemTemplates/Modal/Video.aspx?v=http%3a%2f%2fwww.racingreplays.co.nz%2fmedia%2f202605%2fM2_WAIK_R08_020526.mp4"
+    },
+    {
+      "text": "Watch: Dominant victory over 1300m at Te Rapa (April 17)",
+      "url": "https://loveracing.nz/Common/SystemTemplates/Modal/Video.aspx?v=http%3a%2f%2fwww.racingreplays.co.nz%2fmedia%2f202604%2fM13_WAIK_R07_170426.mp4"
+    }
+  ],
+  "tactical_analysis": {
+    "subtitle": "for her Te Rapa review.",
+    "cards": [
+      {
+        "id": "01",
+        "title": "Heavy Traffic",
+        "badge": "Pocketed",
+        "text": "Drawn in Barrier 1, she was locked along the rail and held up behind a wall of horses, preventing her from launching her run until the final 100 metres."
+      },
+      {
+        "id": "02",
+        "title": "Superb Recovery",
+        "badge": "Sound & Clean",
+        "text": "Tuesday morning check-up confirmed she trotted up soundly and scoped clean, displaying zero respiratory distress and excellent energy."
+      },
+      {
+        "id": "03",
+        "title": "Active Campaign",
+        "badge": "June Target",
+        "text": "Rather than backing off, the trainers will capitalise on her peak fitness and seek another BM75 sprint on soft turf in late June."
+      },
+      {
+        "id": "04",
+        "title": "Grade Versatility",
+        "badge": "BM75 Grade",
+        "text": "Despite being pocketed, her final-furlong acceleration proved she is highly competitive against higher-rated Thoroughbreds."
+      }
+    ]
+  },
+  "cta": {
+    "description": "Track conditions and winter programming updates are made available to co-owners via the private dashboard.",
+    "text": "Enter Stable",
+    "link": "https://evolutionstables.nz/stables"
+  },
+  "sender": {
+    "name": "Alex Baddeley",
+    "title": "Evolution Stables",
+    "signature_image": "/updates/AB_Signiture.png"
+  },
+  "email_teaser_body": "Prudentia contested the Roy and Pam Browne Sprint on Saturday. While a heavily pocketed passage along the rail leaves her officially in fifth, her explosive final 100 metres and an immaculate Tuesday morning veterinary report have the yard highly encouraged for her winter campaign.",
+  "email_cta_text": "Read the Full Briefing & Veterinary Report &rarr;"
+}

@@ -1,0 +1,957 @@
+/* ========================================================================= */
+/* EVOLUTION STABLES — PREMIUM POSTER STYLING & DESIGN SYSTEM                 */
+/* Inherits intelligence from /ui-ux-pro-max: Margins, Contrast & Hierarchy  */
+/* ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Brand Palettes */
+  --color-brand-gold: #d4a964;
+  --color-brand-gold-hover: #c49a5a;
+  --color-champagne-gold: #d4a964; /* Sparing Premium Gold Accent */
+  --color-slate-grey: #8e8e93;      /* Technical slate grey */
+  --color-border-hairline: rgba(142, 142, 147, 0.2);
+
+  /* Velvet Night Theme */
+  --color-bg-base: #070709;
+  --color-surface: #0a0a0d;
+  --color-surface-alt: #111116;
+  --color-foreground: #f5f5fa;
+  --color-muted: #8e8e93;
+  --color-muted-foreground: #4e4e54;
+  --color-border: rgba(255, 255, 255, 0.05);
+
+  /* Premium Fonts */
+  --font-sans: 'Inter Tight', 'Inter', -apple-system, sans-serif;
+  --font-serif: 'Instrument Serif', 'Playfair Display', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+}
+
+/* General Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-base);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+/* Split-screen Dashboard Layout */
+.app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Left Sidebar Control Panel */
+.control-panel {
+  width: 440px;
+  background-color: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.panel-header {
+  padding: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.logo-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.logo-text span {
+  color: var(--color-brand-gold);
+}
+
+.panel-subtitle {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+.form-content {
+  flex: 1;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Card layout inside control panel */
+.control-card {
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.card-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-brand-gold);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title-icon {
+  opacity: 0.8;
+}
+
+/* Form elements styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  letter-spacing: 1px;
+}
+
+.preset-select,
+.form-group input[type="text"],
+.form-group select,
+.widget-textarea {
+  width: 100%;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-foreground);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-family: var(--font-sans);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.preset-select:focus,
+.form-group input[type="text"]:focus,
+.form-group select:focus,
+.widget-textarea:focus {
+  border-color: var(--color-brand-gold);
+  box-shadow: 0 0 0 1px rgba(212, 169, 100, 0.25);
+}
+
+.widget-textarea {
+  resize: none;
+  font-family: var(--font-sans);
+  line-height: 1.4;
+}
+
+.form-group input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 2px;
+  outline: none;
+}
+
+.form-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-brand-gold);
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.form-group input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.slider-val-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-val {
+  font-size: 0.7rem;
+  color: var(--color-brand-gold);
+  font-family: var(--font-mono);
+}
+
+/* File Upload styling */
+.file-upload-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  background-color: var(--color-surface);
+  border: 1px dashed rgba(212, 169, 100, 0.4);
+  color: var(--color-brand-gold);
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.file-upload-btn:hover {
+  background-color: rgba(212, 169, 100, 0.04);
+  border-color: var(--color-brand-gold);
+}
+
+.file-name-preview {
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  text-align: center;
+  word-break: break-all;
+  margin-top: 4px;
+}
+
+/* Grid & Quad Selector Toggles */
+.style-grid-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.style-btn {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-muted);
+  padding: 10px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: all 0.2s ease;
+}
+
+.style-btn span {
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--color-muted-foreground);
+}
+
+.style-btn:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-foreground);
+}
+
+.style-btn.active {
+  border-color: var(--color-brand-gold);
+  background-color: rgba(212, 169, 100, 0.05);
+  color: var(--color-brand-gold);
+}
+
+.style-btn.active span {
+  color: rgba(212, 169, 100, 0.7);
+}
+
+/* Layout Quad Selector Grid */
+.layout-quad-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.quad-btn {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-muted);
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: center;
+}
+
+.quad-btn:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-foreground);
+}
+
+.quad-btn.active {
+  background-color: var(--color-brand-gold);
+  border-color: var(--color-brand-gold);
+  color: var(--color-surface);
+  font-weight: 700;
+}
+
+.helper-text-small {
+  font-size: 0.65rem;
+  color: var(--color-muted-foreground);
+  line-height: 1.3;
+}
+
+/* Checkbox Style */
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  color: var(--color-foreground) !important;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--color-brand-gold);
+  cursor: pointer;
+}
+
+/* Widget Toggle Row */
+.widget-toggle-row {
+  display: flex;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.widget-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  padding: 8px 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+}
+
+.widget-btn:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.widget-btn.active {
+  background-color: var(--color-brand-gold);
+  color: var(--color-surface);
+}
+
+.widget-inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.nested-input-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 8px;
+}
+
+/* Input Row helper */
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Action button row */
+.action-row {
+  padding: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: var(--color-brand-gold);
+  color: var(--color-surface);
+  border: none;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-gold-hover);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Spinning Animation for Loader */
+.spinning {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/* ========================================================================= */
+/* RIGHT PREVIEW WORKSPACE & CANVAS                                           */
+/* ========================================================================= */
+
+.preview-workspace {
+  flex: 1;
+  height: 100%;
+  background-color: #0b0b0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Canvas Scaled Wrapper */
+.canvas-wrapper {
+  position: relative;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.85);
+  transform-origin: center center;
+  background-color: #000000;
+}
+
+/* 1080x1350 Render Target Surface */
+.poster-canvas {
+  width: 1080px;
+  height: 1350px;
+  background-color: #000000;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* 80px Border Safety Margins Guide (Hidden on Export, low opacity in dev) */
+.padding-guide {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  right: 80px;
+  bottom: 80px;
+  border: 1px dashed rgba(212, 169, 100, 0.08);
+  pointer-events: none;
+  z-index: 99;
+}
+
+/* Z-0 Stack: CSS/SVG Film Grain Overlays */
+.grain-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.055;
+  mix-blend-mode: overlay;
+  z-index: 10; /* Soft texture overlaid directly above photos */
+  pointer-events: none;
+}
+
+/* Photographic Style Overlays & Vignettes */
+.filter-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.vignette-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* 1. Isolated Hero (Pure absolute darkroom) */
+.style-grade-isolated .filter-overlay {
+  background: transparent;
+}
+.style-grade-isolated .vignette-overlay {
+  background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.95) 100%);
+}
+
+/* 2. Moody Noir (Deep high-contrast desaturated film paper) */
+.style-grade-moody .filter-overlay {
+  background: #0d121c;
+  mix-blend-mode: saturation;
+  opacity: 0.35;
+}
+.style-grade-moody .vignette-overlay {
+  background: radial-gradient(circle, transparent 20%, rgba(0, 0, 0, 0.95) 90%),
+              radial-gradient(ellipse at center, transparent 30%, rgba(10,12,18,0.7) 100%);
+}
+
+/* 3. Editorial Warm (Rich gold/champagne ambient filtering) */
+.style-grade-editorial .filter-overlay {
+  background: var(--color-champagne-gold);
+  mix-blend-mode: color;
+  opacity: 0.08;
+}
+.style-grade-editorial .vignette-overlay {
+  background: radial-gradient(circle, rgba(212, 169, 100, 0.03) 20%, rgba(15, 12, 8, 0.8) 100%);
+}
+
+/* 4. Kinetic Speed (Cool overcast slate & horizontal focus) */
+.style-grade-telemetry .filter-overlay {
+  background: #0f1a2a;
+  mix-blend-mode: color;
+  opacity: 0.12;
+}
+.style-grade-telemetry .vignette-overlay {
+  background: radial-gradient(circle, transparent 40%, rgba(9, 12, 15, 0.85) 100%);
+}
+
+/* Z-1: Action Lens Image Wrapper */
+.action-lens-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Dynamic fading gradients inside lens frame */
+.poster-canvas::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Soft transition out of the bottom 400px of image space */
+.poster-canvas::after {
+  background: linear-gradient(to top, #000000 0px, transparent 350px);
+}
+
+.action-lens-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  pointer-events: none;
+  filter: contrast(1.05) brightness(0.95);
+}
+
+.no-image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #050507;
+  color: #3e3e44;
+}
+
+
+/* ========================================================================= */
+/* COMPOSITION-AWARE LAYOUT GRIDS & ALIGNMENTS                              */
+/* ========================================================================= */
+
+.layout-overlay-container {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+/* 1. Left Empty Space (Text on Left, Raw Photo is on Right) */
+.align-left {
+  left: 80px;
+  top: 180px;
+  bottom: 80px;
+  width: 520px;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* 2. Right Empty Space (Text on Right, Raw Photo is on Left) */
+.align-right {
+  right: 80px;
+  top: 180px;
+  bottom: 80px;
+  width: 520px;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* 3. Top Empty Space (Text at Top, Raw Photo is at Bottom) */
+.align-top {
+  left: 80px;
+  right: 80px;
+  top: 80px;
+  height: 480px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* 4. Bottom Empty Space (Standard Bottom Editorial Layout) */
+.align-bottom {
+  left: 80px;
+  right: 80px;
+  bottom: 80px;
+  height: 480px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* General Layout Spacing Rules */
+.layout-overlay-container > *:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+
+/* ========================================================================= */
+/* TYPOGRAPHY COMPONENTS                                                     */
+/* ========================================================================= */
+
+/* Monospaced Context Header Tag */
+.context-tag {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-slate-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  white-space: nowrap;
+}
+
+.align-right .context-tag {
+  letter-spacing: 0.32em;
+  margin-right: -0.32em; /* Align absolute right edge */
+}
+
+/* Hero Identity Name blocks */
+.hero-identity-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.align-right .hero-identity-block {
+  align-items: flex-end;
+}
+
+/* Style A: Editorial Serif Name */
+.hero-title-editorial {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Style B: Soft Fluid Cursive Handwriting */
+.hero-title-script {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 102px;
+  line-height: 0.95;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Gold Accent Overlay Glow (Strictly sparing single accent) */
+.gold-glow {
+  color: var(--color-champagne-gold);
+  text-shadow: 0 0 15px rgba(212, 169, 100, 0.12);
+}
+
+/* Style C/D: Custom Signature SVG Image Embeds */
+.signature-svg-wrapper {
+  max-width: 440px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.align-right .signature-svg-wrapper {
+  justify-content: flex-end;
+}
+
+.signature-svg-img {
+  max-height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+
+/* ========================================================================= */
+/* DYNAMIC CONTENT WIDGETS                                                  */
+/* ========================================================================= */
+
+.dynamic-widget-area {
+  width: 100%;
+  max-width: 520px;
+}
+
+.align-right .dynamic-widget-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* 1. Translucent Telemetry Data Bar */
+.telemetry-bar {
+  background-color: rgba(8, 8, 12, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+  padding: 16px var(--space-4);
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.telemetry-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.telemetry-col:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: var(--color-border-hairline);
+}
+
+.tel-val {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 26px;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.tel-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--color-slate-grey);
+  letter-spacing: 0.15em;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+/* 2. Minimalist Quote Block Widget */
+.quote-block {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.align-right .quote-block {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.quote-accent-bar {
+  width: 2px;
+  background-color: var(--color-brand-gold);
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.quote-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quote-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 25px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+}
+
+.quote-attribution {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-slate-grey);
+  letter-spacing: 0.14em;
+  font-style: normal;
+}
+
+/* 3. Segmented Glass Card Widget */
+.segmented-glass-card {
+  background-color: rgba(8, 8, 12, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  width: 100%;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border-hairline);
+  padding-bottom: 12px;
+}
+
+.align-right .card-top {
+  flex-direction: row-reverse;
+}
+
+.card-title-header {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.card-status-pill {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.card-status-pill.gold-accent {
+  background-color: rgba(212, 169, 100, 0.1);
+  border-color: rgba(212, 169, 100, 0.25);
+  color: var(--color-brand-gold);
+}
+
+.card-desc {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+
+/* ========================================================================= */
+/* BRAND WATERMARK MONOGRAM                                                   */
+/* ========================================================================= */
+
+.brand-watermark {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.brand-watermark svg path {
+  fill: #8e8e93;
+}
+
+/* Intelligently place watermark so it never collides with overlays */
+.position-left {
+  right: 80px;
+  bottom: 80px;
+}
+
+.position-right {
+  left: 80px;
+  bottom: 80px;
+}
+
+.position-top {
+  right: 80px;
+  bottom: 80px;
+}
+
+.position-bottom {
+  right: 80px;
+  top: 80px;
+}
