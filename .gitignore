@@ -22,8 +22,10 @@ data/
 node_modules/
 .next/
 
-# Video outputs and dump directories (heavy media files)
+# Video outputs and dump directories (heavy media files; includes symlinks)
+output
 output/
+raw
 raw/
 output_original/
 raw_original/
