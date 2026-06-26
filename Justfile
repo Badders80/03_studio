@@ -1,9 +1,5 @@
 set shell := ["bash", "-cu"]
 
-# Launch the interactive Dev Portal and Control Tower
-task-web:
-    @python3 ../_taskmaster/server.py
-
 # Launch the Update Builder v2 (Vite)
 run-update-builder:
     cd update-builder-v2 && npm run dev
