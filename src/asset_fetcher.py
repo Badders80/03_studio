@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class AssetFetcher:
-    def __init__(self, output_dir="/mnt/s/studio_scratch/assets"):
+    def __init__(self, output_dir="/home/evo/studio_scratch/assets"):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         # We will use Pexels API for free stock footage/images

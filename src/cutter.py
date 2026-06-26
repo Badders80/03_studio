@@ -3,7 +3,7 @@ import os
 import uuid
 
 class Cutter:
-    def __init__(self, scratch_dir="/mnt/s/studio_scratch"):
+    def __init__(self, scratch_dir="/home/evo/studio_scratch"):
         self.scratch_dir = scratch_dir
         if not os.path.exists(scratch_dir):
             os.makedirs(scratch_dir, exist_ok=True)

@@ -27,12 +27,12 @@ def run_pipeline(job_id, job_data):
     
     # 1. Download raw asset (simulated)
     # raw_video_path = download_from_gcs(job_data['raw_video_url'])
-    raw_video_path = "/mnt/s/studio_scratch/raw_input.mp4" # Placeholder
+    raw_video_path = "/home/evo/studio_scratch/raw_input.mp4" # Placeholder
     
     # Initialize components
     transcriber = Transcriber(model_name="base", device="cuda")
     director = Director(model="qwen3:14b")
-    cutter = Cutter(scratch_dir="/mnt/s/studio_scratch")
+    cutter = Cutter(scratch_dir="/home/evo/studio_scratch")
     
     # 2. Transcription (WhisperX)
     print("Step 1: Running WhisperX transcription & alignment...")
@@ -48,7 +48,7 @@ def run_pipeline(job_id, job_data):
     
     # 4. Mechanical Editing (FFmpeg)
     print("Step 3: Mechanical cutting via NVENC FFmpeg...")
-    cut_video_path = f"/mnt/s/studio_scratch/cut_{job_id}.mp4"
+    cut_video_path = f"/home/evo/studio_scratch/cut_{job_id}.mp4"
     cutter.process_cuts(raw_video_path, simulated_edl, cut_video_path)
     
     # 5. Remotion Render (Trigger Node.js)

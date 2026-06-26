@@ -11,10 +11,10 @@ load_dotenv()
 
 class VeoGenerator:
     """
-    Generates high-quality AI videos using Google's Veo 3.1 model via Vertex AI.
-    Requires GOOGLE_CLOUD_PROJECT to be set in .env and ADC authentication.
+    Generates high-quality AI videos using Google's Veo 3.1 model via AI Studio (free tier).
+    Requires AI_STUDIO_API_KEY to be set in .env. Vertex AI is retired (2026-06-18).
     """
-    def __init__(self, output_dir="/mnt/s/studio_scratch/assets"):
+    def __init__(self, output_dir="/home/evo/studio_scratch/assets"):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         
@@ -22,9 +22,9 @@ class VeoGenerator:
         self.location = os.getenv("GOOGLE_CLOUD_LOCATION", "us-central1")
         
         try:
-            # Initialize Vertex AI client via the genai SDK
-            self.client = genai.Client(vertexai=True, project=self.project_id, location=self.location)
-            print(f"Initialized Veo Generator (Project: {self.project_id}, Region: {self.location})")
+            # Initialize AI Studio client (NOT Vertex AI — retired 2026-06-18)
+            self.client = genai.Client(vertexai=False, api_key=os.getenv("AI_STUDIO_API_KEY", ""))
+            print(f"Initialized Veo Generator (AI Studio, free tier)")
         except Exception as e:
             print(f"Error initializing Google GenAI Client: {e}")
             self.client = None

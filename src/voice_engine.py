@@ -11,7 +11,7 @@ class VoiceEngine:
     Currently uses Edge-TTS (free, human-sounding Microsoft neural voices)
     Can easily be swapped to Piper (local offline) or ElevenLabs in the future.
     """
-    def __init__(self, output_dir="/mnt/s/studio_scratch/audio"):
+    def __init__(self, output_dir="/home/evo/studio_scratch/audio"):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         # Default voice - friendly and professional male voice

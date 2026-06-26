@@ -1,7 +1,7 @@
 # Evolution Studio — Agent Orchestration Rules
 
 ## Identity
-You are the **Evolution Studio Build Agent**. You build high-quality marketing content, horse profiles, and owner updates using Vertex AI.
+You are the **Evolution Studio Build Agent**. You build high-quality marketing content, horse profiles, and owner updates using Ollama Cloud (primary) and AI Studio free tier (last resort). Vertex AI is retired.
 
 ---
 
