@@ -1,0 +1,54 @@
+{
+  "$schema": "Evolution Stables race-preview investor email — content schema v1",
+  "slug": "prudentia_update_27june2026",
+  "horse": "Prudentia",
+  "subject": "Investor Update — Prudentia | Tauranga, Saturday 27 June",
+  "preheader": "Prudentia returns to Tauranga Saturday — maiden-win country. Race 7, Barrier 1, 54.0kg. Masa Hashizume booked.",
+  "headline_before": "Back to",
+  "headline_emphasis": "Maiden",
+  "headline_after": "Ground",
+  "subhead": "She broke her maiden at Tauranga. This Saturday she returns to the same track — recovered, sharp in her work, and accepted for Race 7 from Barrier 1. Can she do it again?",
+  "hero_image": "prudentia_masa_tauranga_27june2026.jpg",
+  "hero_alt": "Prudentia with Masa Hashizume at Tauranga",
+  "hero_caption": "Prudentia with Masa Hashizume — back together for Saturday's BM75 at Tauranga",
+  "body_1": "A minor front-foot soreness in early June prompted a tactical withdrawal from her 13 June engagement — the right call to protect the longer campaign. Lance O'Sullivan and Andrew Scott kept her fit through swimming before bringing her back to trackwork with protective pads on both front feet. Her movement is fluid again, and recent work — including a partnered grass gallop with stablemate Ribkraka — has her pulling up clean and sharp.",
+  "quote": {
+    "text": "She's won here, she thrives on heavy footing, and carrying the 54kg minimum gives her a massive tactical edge on a testing winter track.",
+    "author": "Andrew Scott",
+    "affiliation": "Wexford Stables"
+  },
+  "body_2": "She lines up in Race 7 (BM75) over 1400m at 4:21 PM on Saturday, 27 June. Barrier 1, minimum weight 54.0kg, and Masa Hashizume is booked to ride. Ribkraka (Barrier 6) also takes her place for Wexford in the same race.",
+  "race_facts": {
+    "date": "Sat 27 Jun",
+    "race": "R7 · BM75",
+    "distance": "1400m · 4:21pm"
+  },
+  "tab_url": "https://www.tab.co.nz/racing/tauranga/67093530-c5fc-4dc8-9217-31c122124446",
+  "tactical_subtitle": "for Saturday's BM75.",
+  "tactical_cards": [
+    {
+      "id": "01",
+      "title": "Minimum Weight",
+      "badge": "54.0kg",
+      "text": "Prudentia gets in at the absolute bottom of the weights, giving away up to 5.5kg to the top weight. A significant advantage on a testing winter track."
+    },
+    {
+      "id": "02",
+      "title": "Barrier 1",
+      "badge": "Inside Draw",
+      "text": "Jumping from the inside rail gives Masa Hashizume great tactical options — save ground early, or search for better going out wide later in the day."
+    },
+    {
+      "id": "03",
+      "title": "Home Track",
+      "badge": "Proven",
+      "text": "The turning Tauranga layout suits her racing style. She has already won on this course, and handles the kind of soft-to-heavy winter ground forecast for Saturday."
+    }
+  ],
+  "close": "The yard is pleased with where she sits physically. We'll follow up with a full post-race report after Saturday.",
+  "assets": {
+    "header_logo": "evolution-stables-logo-header.jpg",
+    "footer_logo": "EvolutionStables-Mono-White.png",
+    "signature": "AB_Signiture.png"
+  }
+}

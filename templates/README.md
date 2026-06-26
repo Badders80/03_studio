@@ -9,7 +9,8 @@ By utilizing **Antigravity (your AI partner)** alongside these templates, you by
 ## 📂 System Architecture
 
 *   **[`landing_page_master.html`](file:///home/evo/evo_01/03_studio/templates/landing_page_master.html)** — Premium dark-themed editorial layout. Self-contained, responsive, utilizes Google Fonts (Playfair Display + Inter), and includes the signature golden branding colors (#d4a964) and micro-animations.
-*   **[`email_teaser_master.html`](file:///home/evo/evo_01/03_studio/templates/email_teaser_master.html)** — Lightweight, highly optimized table-based HTML newsletter layout tested for perfect rendering in Gmail, Apple Mail, and Outlook.
+*   **[`investor_update_email_master.html`](file:///home/evo/evo_01/03_studio/templates/investor_update_email_master.html)** — **Gold standard** full-content race-preview email (600px table layout). Locked from Prudentia 27 Jun 2026. See `race_preview_update.schema.json` + `04_comms/.agents/skills/investor-update-pipeline/`.
+*   **[`email_teaser_master.html`](file:///home/evo/evo_01/03_studio/templates/email_teaser_master.html)** — Lightweight teaser linking to hosted update (optional; full email preferred for investors).
 *   **[`generate_update.py`](file:///home/evo/evo_01/03_studio/templates/generate_update.py)** — Zero-dependency Python 3 utility that parses a structured JSON input file and instantly generates both landing page and email HTML files directly inside the website's public updates folder (`02_website/public/updates/`).
 *   **[`example_update.json`](file:///home/evo/evo_01/03_studio/templates/example_update.json)** — An example data structure representing our highly successful May 28 update for *Prudentia*.
 

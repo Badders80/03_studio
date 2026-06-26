@@ -25,6 +25,8 @@ node_modules/
 # Video outputs and dump directories (heavy media files)
 output/
 raw/
+output_original/
+raw_original/
 Content_Dump/
 remotion-renderer/out/
 

@@ -133,7 +133,10 @@ def build_hero_image_email(img_url, caption):
           </tr>"""
 
 def log_compiled_update_to_ledger(data, slug):
-    db_path = "/home/evo/workspace/projects/Evolution_Content/data/ledger.sqlite"
+    db_path = os.getenv(
+        "INGEST_DB_PATH",
+        "/home/evo/evo_01/01_evolution/api/email-ingest/data/ledger.sqlite",
+    )
     if not os.path.exists(os.path.dirname(db_path)):
         return
     

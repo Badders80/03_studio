@@ -1,0 +1,68 @@
+{
+  "slug": "prudentia_update_10june2026",
+  "preheader": "Prudentia will sit out her planned engagement this Saturday to recover from mild foot soreness, pivoting her campaign to Tauranga on 27 June.",
+  "title": "Tauranga Target: <span style=\"color: #d4a964; font-style: italic; font-weight: 400;\">Prudentia</span> Pivots Campaign",
+  "hero_media": "<div style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(circle, #222222 0%, #050505 100%); padding: 24px; box-sizing: border-box;\"><div style=\"margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; color: #d4a964; letter-spacing: 2px; text-transform: uppercase;\">Audio Update: Wexford Stables</div><audio src=\"https://cdn2.prism.horse/media/7a4459ea14374fcb956845e9b13643f1.mp3\" controls style=\"width: 80%; max-width: 400px; filter: invert(1) hue-rotate(180deg);\"></audio></div>",
+  "hero_image_email": "/updates/prudentia_te_rapa_may30.jpg",
+  "hero_caption": "PRUDENTIA CONTINUES CONDITIONAL SWIMMING WORK WHILE RECOVERING FROM MILD FOOT SORENESS.",
+  "standfirst": "Prudentia will sit out Saturday's race due to mild foot soreness, pivoting to Tauranga on 27 June while maintaining fitness in the pool.",
+  "body_1": "Prudentia has been withdrawn from this Saturday's race due to minor front-foot soreness. While recovering well, the timing has interrupted her galloping schedule.",
+  "body_2": "Rider Noel reported she did not feel 100% fluid on Wednesday. Having missed key gallop sessions, she will not race without preparation, instead maintaining fitness via swimming.",
+  "body_3": "Once settled, she will complete key hit-outs before targeting a Benchmark 75 event at Tauranga on 27 June—a track she has won at previously.",
+  "quote": {
+    "text": "“She is coming right, but she just ran out of runway to get there this Saturday. We have kept her swimming to maintain fitness, and we will target Tauranga in two weeks.”",
+    "author": "— Andrew Scott",
+    "affiliation": "Wexford Stables"
+  },
+  "revisit_links": [
+    {
+      "text": "Watch: Gutsy fifth in Roy & Pam Browne Sprint at Te Rapa (May 30)",
+      "url": "https://loveracing.nz/Common/SystemTemplates/Modal/Video.aspx?v=http%3a%2f%2fwww.racingreplays.co.nz%2fmedia%2f202605%2fM2_WAIK_R08_300526.mp4&amp;i=%2fCommon%2fImage.ashx%3fw%3d720%26h%3d400%26a%3d1%26o%3d1%26bg%3deeeeee%26p%3dhttp%3a%2f%2fwww.racingreplays.co.nz%2fmedia%2f202605%2fM2_WAIK_R08_300526.jpg&amp;r=Race+8+-+ROY+AND+PAM+BROWNE+SPRINT&amp;rs=1&amp;jwsource=cl"
+    },
+    {
+      "text": "Watch: Gutsy third over 1400m at Waikato (May 2)",
+      "url": "https://loveracing.nz/Common/SystemTemplates/Modal/Video.aspx?v=http%3a%2f%2fwww.racingreplays.co.nz%2fmedia%2f202605%2fM2_WAIK_R08_020526.mp4"
+    }
+  ],
+  "tactical_analysis": {
+    "subtitle": "for her Tauranga target.",
+    "cards": [
+      {
+        "id": "01",
+        "title": "Minor Foot Issue",
+        "badge": "Withdrawn",
+        "text": "Soreness in her off-side and near-side front feet has resolved well but interrupted her training prep, leading the team to sit out this weekend."
+      },
+      {
+        "id": "02",
+        "title": "Swimming Conditioning",
+        "badge": "Fitness Maintained",
+        "text": "To protect her feet while maintaining aerobic conditioning, she has been kept on a swimming programme, preserving her baseline fitness."
+      },
+      {
+        "id": "03",
+        "title": "Tauranga Target",
+        "badge": "Rating 75",
+        "text": "Her next target is a Benchmark 75 race at Tauranga in two weeks. She has won at this venue previously and will benefit from eased turf."
+      },
+      {
+        "id": "04",
+        "title": "Essential Gallops",
+        "badge": "Hit-outs Required",
+        "text": "Before lining up at Tauranga, she will complete a couple of sharp gallop hit-outs to ensure she is at peak racing fitness."
+      }
+    ]
+  },
+  "cta": {
+    "description": "Track conditions and winter programming updates are made available to co-owners via the private dashboard.",
+    "text": "Enter Stable",
+    "link": "https://evolutionstables.nz/stables"
+  },
+  "sender": {
+    "name": "Alex Baddeley",
+    "title": "Evolution Stables",
+    "signature_image": "/updates/AB_Signiture.png"
+  },
+  "email_teaser_body": "Prudentia will sit out her planned engagement this Saturday due to minor foot soreness. While she is recovering well, the disruption to her training means she has run out of runway for this weekend. The yard is pivoting her campaign to a Rating 75 event at Tauranga on 27 June, utilizing swimming work in the interim to maintain fitness.",
+  "email_cta_text": "Read the Full Briefing & Campaign Plan &rarr;"
+}
