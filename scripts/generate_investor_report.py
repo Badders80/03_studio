@@ -39,12 +39,14 @@ def generate_report(data, template_path, output_path):
 
     # Derived data for template
     data['lease_share_nzd'] = f"{data['total_eligible_nzd'] * 0.05:,.2f}"
-    data['total_stakes_nzd'] = f"{data['total_eligible_nzd']:,.2f}"
+    data['distribution_stakes_nzd'] = f"{data['total_eligible_nzd']:,.2f}"
+    data['total_stakes_nzd'] = data.get('total_stakes_nzd', f"{data['total_eligible_nzd']:,.2f}")
 
-    # Prudentia Specifics (could be parameterized but for now)
+    # Prudentia Specifics
     data['horse_name'] = data.get('horse_name', "Prudentia")
     data['asset_id'] = data.get('asset_id', "10")
-    data['report_date'] = data.get('report_date', "June 29, 2026")
+    data['report_date'] = data.get('report_date', "30 June 2026")
+    data['report_period'] = data.get('report_period', "Q1/Q2 2026")
 
     output = template.render(data)
 
@@ -57,7 +59,8 @@ def generate_report(data, template_path, output_path):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate Prudentia Investor Report")
     # Support both underscore and dash versions
-    parser.add_argument("--total-eligible-nzd", "--total_eligible_nzd", type=float, help="Total eligible NZD")
+    parser.add_argument("--total-eligible-nzd", "--total_eligible_nzd", type=float, help="Total eligible NZD (the distribution pool)")
+    parser.add_argument("--total-stakes-nzd", type=float, help="Total stakes earned by the horse (100% ownership)")
     parser.add_argument("--tokens", type=int, help="Number of tokens")
     parser.add_argument("--fx", type=float, help="FX Rate NZD to AED")
     parser.add_argument("--slug", type=str, help="Report slug for output filename")
@@ -79,6 +82,8 @@ if __name__ == "__main__":
             "tokens": args.tokens,
             "fx": args.fx
         }
+        if args.total_stakes_nzd:
+            data["total_stakes_nzd"] = f"{args.total_stakes_nzd:,.2f}"
         generate_report(data, args.template, output_path)
     else:
         print("Missing required arguments. Use --help for usage.")
