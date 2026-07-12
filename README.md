@@ -1,5 +1,26 @@
 # 03_studio: OpenMontage Render Silo
 
+**Agent boot:** [`STATE.md`](STATE.md) → this file.
+
+
+## Agent / session boot
+
+**This folder is an island.** Do not invent “what’s next” from chat.
+
+| Order | File |
+|-------|------|
+| **1** | [`continue.md`](continue.md) |
+| **2** | [`STATE.md`](STATE.md) |
+
+```text
+Read continue.md and STATE.md. What's next?
+```
+
+End session: *“update the end of session notes”* → overwrite continue + patch STATE.  
+Full protocol: [`../docs/SESSION_PROTOCOL.md`](../docs/SESSION_PROTOCOL.md)
+
+---
+
 This is your **Autonomous Local Render Node**. It lives inside WSL and uses your RTX 3060 to programmatically edit videos, strip out filler words, and overlay high-end "consulting-grade" graphics using Remotion.
 
 It sits quietly and listens to the `01_evolution` Hub (via Firestore) for new jobs.
